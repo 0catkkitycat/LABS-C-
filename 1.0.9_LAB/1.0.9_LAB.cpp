@@ -60,3 +60,15 @@ double LazySquare::get_area() {
 	return area;
 }
 
+int main() {
+	AdHocSquare s1(20);
+	LazySquare s2(27);
+
+	cout << "AdHocSquare area: " << s1.get_area() << endl;
+	s1.set_side(10);
+	cout << "AdHocSquare area: " << s1.get_area() << endl;
+
+	cout << "LazySquare area: " << s2.get_area() << endl;
+	s2.set_side(10);
+	cout << "LazySquare area: " << s2.get_area() << endl;
+}
