@@ -76,14 +76,14 @@ std::string Line2D::toString() const {
 }
 
 bool Line2D::contains(const Point2D& p) const {
-    const double EPSILON = 1e-9; // A small value for floating-point comparisons
+    const double EPSILON = 1e-9; 
 
     if (std::isinf(slope)) {
-        // For vertical lines, check if the x-coordinate matches
+        
         return std::abs(p.getX() - y_intercept) < EPSILON;
     }
     else {
-        // For other lines, check if the point satisfies y = mx + b
+        
         return std::abs(p.getY() - (slope * p.getX() + y_intercept)) < EPSILON;
     }
 }
